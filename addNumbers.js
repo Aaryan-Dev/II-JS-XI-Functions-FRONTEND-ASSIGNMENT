@@ -3,13 +3,13 @@
 // Use the function to calculate the sum of given three numbers
 
 function twoAdd(a, b){
-    console.log(a + b);
+   return a +b;
 }
-
-twoAdd(5,7);
-
-function threeAdd(a, b, c){
-    console.log(a + b+ c);
+function threeAdd(x, c){
+    return x + c
 }
+let fu = twoAdd(5,6);
+let tu = threeAdd(fu, 8)
 
-threeAdd(5,7,9);
+console.log(fu);
+console.log(tu);
