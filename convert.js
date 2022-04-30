@@ -42,36 +42,28 @@ function alpha(char){
     alpha("DFUH");
 
 
-function  getArr (array){
+function  getArr (arr){
 
-    let arrupper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let arrlower = "abcdefghijklmnopqrstuvwxyz";
+   
+
+arrupper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+arrlower = "abcdefghijklmnopqrstuvwxyz";
 
 tag = [];
-    for(i=0; i<array.length; i++){
+for(i=0; i<arr.length; i++){
+    x= arr[i];
+    let bag = ""
+    for(j=0; j<x.length; j++){
 
-         x = array[i];
-         bag = "";
-        for(j=0; j<x.length; j++){
-
-            for(k= 0 ; k<arrupper.length; k++){
-            if(x[j]==arrupper[k]){
-                  bag  =  bag  +  arrlower[k];
-            }
+        for(k=0; k<arrupper.length; k++){
+        if(x[j]===arrupper[k]){
+             bag = bag + arrlower[k];
             }
         }
-        
-     
-            tag = tag + "\""+ bag + "\""+ ","+" ";
-
-
-
     }
-
-console.log( "\["+tag+"\]" );
-
-
-    }
-
-    getArr(["DFG","DFG","YJT","YUK","ART","RYTH","UKGI"]); 
-
+    tag.push(bag);
+    
+}
+console.log(tag);
+}
+getArr( ["FDG","RERG","THH","DFG","DFG"]);
